@@ -486,7 +486,6 @@ In the end, John would like to have 2 arrays:
 GOOD LUCK 😀
 */
 
-
 /*****************************
  * CODING CHALLENGE 3 ANSWER
  */
@@ -511,5 +510,69 @@ total = [tip[0] + bill[0], tip[1] + bill[1], tip[2] + bill[2]];
 console.log(tip, total); */
 
 /*****************************
- * CODING CHALLENGE 3 ANSWER
+ * Objects and properties
  */
+
+/* var john = {
+  firstname: "John",
+  lastName: "Smith",
+  birthYear: 1990,
+  family: ["Jane", "Mark", "Bob", "Emily"],
+  job: "teacher",
+  isMarried: false
+};
+
+console.log(john.firstname);
+console.log(john['lastName']);
+var x= 'birthYear';
+console.log(john[x]);
+
+//mutate or modified
+john.job='designer';
+john['isMarried']=true;
+console.log(john);
+
+//creating new objects syntax
+var jane = new Object();
+jane.name='jane';
+jane.birthYear=1969;
+jane['lastName']='Smith';
+console.log(jane);
+ */
+
+/*****************************
+ * Objects and methods
+ */
+
+/* var john = {
+  firstname: "John",
+  lastName: "Smith",
+  birthYear: 1990,
+  family: ["Jane", "Mark", "Bob", "Emily"],
+  job: "teacher",
+  isMarried: false,
+  calcAge: function() {
+    this.age=2019 - this.birthYear;
+  }
+};
+
+john.calcAge();
+console.log(john);
+ */
+
+/*****************************
+ * CODING CHALLENGE 4
+ */
+
+/*
+Let's remember the first coding challenge where Mark and John compared their BMIs. Let's now implement the same functionality with objects and methods.
+1. For each of them, create an object with properties for their full name, mass, and height
+2. Then, add a method to each object to calculate the BMI. Save the BMI to the object and also return it from the method.
+3. In the end, log to the console who has the highest BMI, together with the full name and the respective BMI. Don't forget they might have the same BMI.
+
+Remember: BMI = mass / height^2 = mass / (height * height). (mass in kg and height in meter).
+
+GOOD LUCK 😀
+*/
+
+
