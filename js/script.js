@@ -575,4 +575,39 @@ Remember: BMI = mass / height^2 = mass / (height * height). (mass in kg and heig
 GOOD LUCK 😀
 */
 
+var Mark = {
+  fullName: "Mark",
+  mass: 81, //kg
+  height: 2, //meters
+  calcBMI: function() {
+    this.BMI = this.mass / (this.height * this.height);
+    return this.BMI;
+  }
+};
 
+var John = {
+  fullName: "John",
+  mass: 69, //kg
+  height: 1.70688, //meters
+  calcBMI: function() {
+    this.BMI = this.mass / (this.height * this.height);
+    return this.BMI;//return then we have to do all the methods calcBMI()
+  }
+};
+
+//Mark.calcBMI();  //Return then no call the methods
+//John.calcBMI();
+console.log(Mark);
+console.log(John);
+console.log(Mark.calcBMI());
+console.log(John.calcBMI());
+
+//A BMI of less than 18.5 means that a person is underweight. A BMI of between 18.5 and 24.9 is ideal. A BMI of between 25 and 29.9 is overweight. A BMI over 30 indicates obesity.
+
+if(Mark.calcBMI()>John.calcBMI()){
+  console.log(Mark.fullName+" has a highest BMI with "+Mark.BMI);
+}else if(Mark.BMI<John.BMI){
+  console.log(John.fullName+" has a highest BMI with "+John.BMI);
+}else{
+  console.log("They have equal BMI");
+}
