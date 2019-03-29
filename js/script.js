@@ -575,7 +575,10 @@ Remember: BMI = mass / height^2 = mass / (height * height). (mass in kg and heig
 GOOD LUCK 😀
 */
 
-var Mark = {
+/*****************************
+ * CODING CHALLENGE 4 solution
+ */
+/* var Mark = {
   fullName: "Mark",
   mass: 81, //kg
   height: 2, //meters
@@ -604,10 +607,72 @@ console.log(John.calcBMI());
 
 //A BMI of less than 18.5 means that a person is underweight. A BMI of between 18.5 and 24.9 is ideal. A BMI of between 25 and 29.9 is overweight. A BMI over 30 indicates obesity.
 
+//One time call of calcBMI will do.
 if(Mark.calcBMI()>John.calcBMI()){
   console.log(Mark.fullName+" has a highest BMI with "+Mark.BMI);
 }else if(Mark.BMI<John.BMI){
   console.log(John.fullName+" has a highest BMI with "+John.BMI);
 }else{
   console.log("They have equal BMI");
+}
+ */
+
+/*****************************
+ * Loops and iteration
+ */
+
+//For loop
+
+for (var i = 0; i < 10; i += 2) {
+  console.log(i);
+}
+
+// for (var i = 0; i < 10; i ++) {
+//   console.log(i);
+// } //down there expanation
+
+//i=0,0<10 true,log i to console,i++
+//i=1,1<10 true,log i to console,i++
+//...
+//i=9,9<10 true,log i to console,i++
+//i=9,10<10 false,exit the loop!
+
+var john = ["John", "Smith", 1990, "teacher", "designer", false, "blue"];
+
+// console.log(john[0]);
+// console.log(john[1]);
+// console.log(john[2]);  //not good way for 50 item we have to do till 50 console.log(john[...]);
+// console.log(john[3]);
+// console.log(john[4]);
+
+/* for(var i=0;i<john.length;i++){
+  console.log(john[i]);   //john.length is 5 because of the item in array .
+}
+
+
+//While loop
+var i =0;
+while(i<john.length){
+  console.log(john[i]); 
+  i++;
+}
+ */
+
+//Continue and break statements
+
+var john = ["John", "Smith", 1990, "teacher", "designer", false, "blue"];
+
+for (var i = 0; i < john.length; i++) {
+  if (typeof john[i] !== "string") continue;
+  console.log(john[i]);
+}
+
+for (var i = 0; i < john.length; i++) {
+  if (typeof john[i] !== "string") break;
+  console.log(john[i]);
+}
+
+//loop backward
+for (var i = john.length-1; i>=0 ; i--) {
+  console.log(john[i]);
 }
